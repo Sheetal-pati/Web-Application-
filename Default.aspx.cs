@@ -48,7 +48,7 @@ public partial class _Default : System.Web.UI.Page
         {
             int index = Convert.ToInt32(e.CommandArgument);
             GridViewRow row = gvCustomers.Rows[index];
-            Response.Redirect("~/Default2.aspx?Empno=" + row.Cells[0].Text);
+            Response.Redirect("~/Default3.aspx?Empno=" + row.Cells[0].Text);
         }
     }
     protected void txtSearch_TextChanged(object sender, EventArgs e)
