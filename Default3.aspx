@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default3.aspx.cs" Inherits="Default3" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default3.aspx.cs" Inherits="Default3" %>
 
 <!DOCTYPE html>
 
@@ -47,50 +47,71 @@
         #button {
             margin-bottom:20px;
         }
+        .tb {
+            border-style:none;
+            margin-left:20px;
+        }
+        .tbx {
+             border-style:none;
+            margin-left:20px;
+            padding:0;
+        }
+        #GridView1,#EDIT {
+            margin-left:20px;
+        }
+        #GridView1 {
+            border:2px solid darkblue;
+        }
+        #Label15 {
+        margin-bottom:30px;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+          <div class="topnav">
+  <a href="#home">Dashboard</a>
+  <a href="#news">Enquiry List/Room Allotment</a>
+  <a href="#contact">Checkin/CheckOut</a>
+  <a href="#about">Billing</a>
+  <a href="#home">Cash Commitment</a>
+  <a href="#home">Feedback</a>
+  <a href="#home">Room Status</a>
+  <a href="#home">Notice</a>
+</div>
+    <div id="main">
         <asp:Label ID="Label1" runat="server" Text="Label">Request No:</asp:Label>
+        <asp:Label ID="Label14" runat="server" Text="Label"></asp:Label><br />
         <asp:Label ID="Label2" runat="server" Text="Label">Status:</asp:Label>
-        <asp:Label ID="Label3" runat="server" Text="Label">Applicant Deatils:</asp:Label>
+        <asp:Label ID="Label15" runat="server" Text="Label"></asp:Label><br />
+        <asp:Label ID="Label3" runat="server" Text="Label">Applicant Details:</asp:Label>
+        <asp:Label ID="Label16" runat="server" Text="Label"></asp:Label><br />
         <asp:Label ID="Label4" runat="server" Text="Label">Contact Details:</asp:Label>
+        <asp:Label ID="Label17" runat="server" Text="Label"></asp:Label><br />
         <asp:Label ID="Label5" runat="server" Text="Label">Purpose:</asp:Label>
+        <asp:Label ID="Label18" runat="server" Text="Label"></asp:Label><br />
         <asp:Label ID="Label6" runat="server" Text="Label">Identification Proof:</asp:Label>
+        <asp:LinkButton ID="LinkButton1" runat="server">Click Here</asp:LinkButton><br />
         <asp:Label ID="Label7" runat="server" Text="Label">Arrival Date/Time:</asp:Label>
+        <asp:Label ID="Label20" runat="server" Text="Label"></asp:Label><br />
         <asp:Label ID="Label8" runat="server" Text="Label">Depature Date/Time:</asp:Label>
+        <asp:Label ID="Label21" runat="server" Text="Label"></asp:Label><br />
         <asp:Label ID="Label9" runat="server" Text="Label">Booking Date/Time:</asp:Label>
+        <asp:Label ID="Label22" runat="server" Text="Label"></asp:Label><br />
         <asp:Label ID="Label10" runat="server" Text="Label">No. of Rooms Required:</asp:Label>
+        <asp:Label ID="Label23" runat="server" Text="Label"></asp:Label><br />
         <asp:Label ID="Label11" runat="server" Text="Label">Amount borne by:</asp:Label>
+        <asp:Label ID="Label24" runat="server" Text="Label"></asp:Label><br />
         <asp:Label ID="Label12" runat="server" Text="Label">Remarks:</asp:Label>
+        <asp:Label ID="Label25" runat="server" Text="Label"></asp:Label><br />
         <asp:Label ID="Label13" runat="server" Text="Label">Cancellation/Rejection Reason(if any):</asp:Label>
-        <h3>Guest Details</h3>
-        <asp:DataList ID="DataList1" runat="Server" DataSourceID="SqlDataSource1" DataKeyField="AutoID" Width="100%"
-     RepeatColumns="2" RepeatDirection="horizontal" RepeatLayout="table" CellPadding="2" CellSpacing="1"
-     BorderWidth="1">
-    <ItemTemplate>
-        <table  style="background-color:#efefef;width:100%;">
-            <tr>
-                <td>
-                    Sl : <%# Eval("guestId") %> (Age: <%# Eval("age") %>, Gender: <%# Eval("gender") %>),  <%# Eval("contact") %><br />
-                     <%# Eval("org") %><br />
-                     <%# Eval("") %><br />                                        
-                </td>
-            </tr>
-        </table>
-    </ItemTemplate>
-             <SeparatorTemplate>
-        |||
-    </SeparatorTemplate>
-</asp:DataList> 
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString='<%$ "data source=172.16.113.13;uid=sa;pwd=server;database=GUESTHOUSE;" %>'
- SelectCommand="Select * FROM guest ">
- </asp:SqlDataSource>
-        <div id="button"> <asp:Button ID="Button1" runat="server" Text="Allot Room(s)" />
-        <asp:Button ID="Button2" runat="server" Text="Cancel Booking" />
-        <asp:Button ID="edit" runat="server" Text="Edit Details" OnClick="edit_Click" /></div>
-    </div>
-    </form>
+        <asp:Label ID="Label26" runat="server" Text="Label"></asp:Label><br />
+        </div>
+            <h3 style="margin-left:20px">Guest Details</h3>
+        <asp:GridView ID="GridView1" runat="server">
+        </asp:GridView>
+        <asp:Button ID="EDIT" runat="server" Text="EDIT" onClick="EDIT_Click"/>
+  
+</form>
 </body>
 </html>
