@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default2.aspx.cs" Inherits="Default2" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default2.aspx.cs" Inherits="Default2" %>
 
 <!DOCTYPE html>
 
@@ -42,9 +42,9 @@ body {
 }
 
 .right {
-    margin-top:-200px;
-    margin-left:800px;
-     line-height:200%;
+    margin-top:-390px;
+    margin-left:700px;
+    
         }
         .left,.guesttable,.foot {
             margin-left:20px;
@@ -64,6 +64,9 @@ h3 {color:#3a54f2;
         .DropDownListc7 {
             width: 170px;
         }
+         #FileUpload1,#DropDownList1,#dateArrival,#dateDep,#DropDownList4,#DropDownList5 {
+             margin-bottom:20px;
+         }
 
 </style>
 </head>
@@ -140,8 +143,7 @@ h3 {color:#3a54f2;
             </div>
         <div class="right">
             <asp:Label ID="Label7" runat="server" Text="Scanned copy of Office ID"></asp:Label><br />
-            <asp:FileUpload ID="FileUpload1" runat="server" />
-            <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click"/><br />
+            <asp:FileUpload ID="FileUpload1" runat="server" /><br />
             <asp:Label ID="Label8" runat="server" Text="Purpose of visit"></asp:Label><br />
             <asp:DropDownList ID="DropDownList1" runat="server" >
                  <asp:listitem text="Select Purpose" value="1"></asp:listitem>
@@ -257,16 +259,6 @@ h3 {color:#3a54f2;
                     <asp:TextBox ID="TextBox37" CssClass="TextBoxc6" runat="server"></asp:TextBox></td>
                 <td>
                     <asp:DropDownList ID="TextBox38" CssClass="DropDownListc7" runat="server">
-                        <asp:listitem text=" " value="0"></asp:listitem>
-                        <asp:listitem text="(a)CSIR Employee" value="1"></asp:listitem>
-                        <asp:listitem text="(b)CSIR Pensioner" value="2"></asp:listitem>
-                        <asp:listitem text="(c)CSIR Student(PF/JRF/SRF/RA/Scholars)" value="3"></asp:listitem>
-                        <asp:listitem text="Dependant spouse/child/parent/sibling of (a)/(b)" value="4"></asp:listitem>
-                        <asp:listitem text="Non-Dependant spouse/child/parent/sibling of (a)/(b)" value="5"></asp:listitem>
-                        <asp:listitem text="Other Friend/Relative/Personal Guest of (a)/(b)" value="6"></asp:listitem>
-                        <asp:listitem text="Students Family/Relative/Personal guest of (c)" value="7"></asp:listitem>
-                        <asp:listitem text="[Official] Expert/Invitee/Reviewer/Consultant/Non-CSIR Official for CSIR/IMMT work" value="8"></asp:listitem>
-                        <asp:listitem text="NRI/Foreign Guest" value="9"></asp:listitem>
                     </asp:DropDownList></td>
                 <td>
                     <asp:TextBox ID="TextBox39" CssClass="TextBoxc8" runat="server" placeholder="Voter-ID/Adhaar/PAN/DL/etc"></asp:TextBox></td>
@@ -289,16 +281,6 @@ h3 {color:#3a54f2;
                     <asp:TextBox ID="TextBox11" CssClass="TextBoxc6" runat="server"></asp:TextBox></td>
                 <td>
                     <asp:DropDownList ID="DropDownList7" CssClass="DropDownListc7" runat="server">
-                        <asp:listitem text=" " value="0"></asp:listitem>
-                        <asp:listitem text="(a)CSIR Employee" value="1"></asp:listitem>
-                        <asp:listitem text="(b)CSIR Pensioner" value="2"></asp:listitem>
-                        <asp:listitem text="(c)CSIR Student(PF/JRF/SRF/RA/Scholars)" value="3"></asp:listitem>
-                        <asp:listitem text="Dependant spouse/child/parent/sibling of (a)/(b)" value="4"></asp:listitem>
-                        <asp:listitem text="Non-Dependant spouse/child/parent/sibling of (a)/(b)" value="5"></asp:listitem>
-                        <asp:listitem text="Other Friend/Relative/Personal Guest of (a)/(b)" value="6"></asp:listitem>
-                        <asp:listitem text="Students Family/Relative/Personal guest of (c)" value="7"></asp:listitem>
-                        <asp:listitem text="[Official] Expert/Invitee/Reviewer/Consultant/Non-CSIR Official for CSIR/IMMT work" value="8"></asp:listitem>
-                        <asp:listitem text="NRI/Foreign Guest" value="9"></asp:listitem>
                     </asp:DropDownList></td>
                 <td>
                     <asp:TextBox ID="TextBox12" CssClass="TextBoxc8" runat="server" placeholder="Voter-ID/Adhaar/PAN/DL/etc"></asp:TextBox></td>
@@ -321,16 +303,6 @@ h3 {color:#3a54f2;
                     <asp:TextBox ID="TextBox16" CssClass="TextBoxc6" runat="server"></asp:TextBox></td>
                 <td>
                     <asp:DropDownList ID="DropDownList9" CssClass="DropDownListc7" runat="server">
-                        <asp:listitem text=" " value="0"></asp:listitem>
-                        <asp:listitem text="(a)CSIR Employee" value="1"></asp:listitem>
-                        <asp:listitem text="(b)CSIR Pensioner" value="2"></asp:listitem>
-                        <asp:listitem text="(c)CSIR Student(PF/JRF/SRF/RA/Scholars)" value="3"></asp:listitem>
-                        <asp:listitem text="Dependant spouse/child/parent/sibling of (a)/(b)" value="4"></asp:listitem>
-                        <asp:listitem text="Non-Dependant spouse/child/parent/sibling of (a)/(b)" value="5"></asp:listitem>
-                        <asp:listitem text="Other Friend/Relative/Personal Guest of (a)/(b)" value="6"></asp:listitem>
-                        <asp:listitem text="Students Family/Relative/Personal guest of (c)" value="7"></asp:listitem>
-                        <asp:listitem text="[Official] Expert/Invitee/Reviewer/Consultant/Non-CSIR Official for CSIR/IMMT work" value="8"></asp:listitem>
-                        <asp:listitem text="NRI/Foreign Guest" value="9"></asp:listitem>
                     </asp:DropDownList></td>
                 <td>
                     <asp:TextBox ID="TextBox17" CssClass="TextBoxc8" runat="server" placeholder="Voter-ID/Adhaar/PAN/DL/etc"></asp:TextBox></td>
@@ -353,16 +325,6 @@ h3 {color:#3a54f2;
                     <asp:TextBox ID="TextBox21" CssClass="TextBoxc6" runat="server"></asp:TextBox></td>
                 <td>
                     <asp:DropDownList ID="DropDownList11" CssClass="DropDownListc7" runat="server">
-                        <asp:listitem text=" " value="0"></asp:listitem>
-                        <asp:listitem text="(a)CSIR Employee" value="1"></asp:listitem>
-                        <asp:listitem text="(b)CSIR Pensioner" value="2"></asp:listitem>
-                        <asp:listitem text="(c)CSIR Student(PF/JRF/SRF/RA/Scholars)" value="3"></asp:listitem>
-                        <asp:listitem text="Dependant spouse/child/parent/sibling of (a)/(b)" value="4"></asp:listitem>
-                        <asp:listitem text="Non-Dependant spouse/child/parent/sibling of (a)/(b)" value="5"></asp:listitem>
-                        <asp:listitem text="Other Friend/Relative/Personal Guest of (a)/(b)" value="6"></asp:listitem>
-                        <asp:listitem text="Students Family/Relative/Personal guest of (c)" value="7"></asp:listitem>
-                        <asp:listitem text="[Official] Expert/Invitee/Reviewer/Consultant/Non-CSIR Official for CSIR/IMMT work" value="8"></asp:listitem>
-                        <asp:listitem text="NRI/Foreign Guest" value="9"></asp:listitem>
                     </asp:DropDownList></td>
                 <td>
                     <asp:TextBox ID="TextBox22" CssClass="TextBoxc8" runat="server" placeholder="Voter-ID/Adhaar/PAN/DL/etc"></asp:TextBox></td>
@@ -385,16 +347,6 @@ h3 {color:#3a54f2;
                     <asp:TextBox ID="TextBox26" CssClass="TextBoxc6" runat="server"></asp:TextBox></td>
                 <td>
                     <asp:DropDownList ID="DropDownList13" CssClass="DropDownListc7" runat="server">
-                        <asp:listitem text=" " value="0"></asp:listitem>
-                        <asp:listitem text="(a)CSIR Employee" value="1"></asp:listitem>
-                        <asp:listitem text="(b)CSIR Pensioner" value="2"></asp:listitem>
-                        <asp:listitem text="(c)CSIR Student(PF/JRF/SRF/RA/Scholars)" value="3"></asp:listitem>
-                        <asp:listitem text="Dependant spouse/child/parent/sibling of (a)/(b)" value="4"></asp:listitem>
-                        <asp:listitem text="Non-Dependant spouse/child/parent/sibling of (a)/(b)" value="5"></asp:listitem>
-                        <asp:listitem text="Other Friend/Relative/Personal Guest of (a)/(b)" value="6"></asp:listitem>
-                        <asp:listitem text="Students Family/Relative/Personal guest of (c)" value="7"></asp:listitem>
-                        <asp:listitem text="[Official] Expert/Invitee/Reviewer/Consultant/Non-CSIR Official for CSIR/IMMT work" value="8"></asp:listitem>
-                        <asp:listitem text="NRI/Foreign Guest" value="9"></asp:listitem>
                     </asp:DropDownList></td>
                 <td>
                     <asp:TextBox ID="TextBox27" CssClass="TextBoxc8" runat="server" placeholder="Voter-ID/Adhaar/PAN/DL/etc"></asp:TextBox></td>
@@ -417,16 +369,6 @@ h3 {color:#3a54f2;
                     <asp:TextBox ID="TextBox31" CssClass="TextBoxc6" runat="server"></asp:TextBox></td>
                 <td>
                     <asp:DropDownList ID="DropDownList15" CssClass="DropDownListc7" runat="server">
-                        <asp:listitem text=" " value="0"></asp:listitem>
-                        <asp:listitem text="(a)CSIR Employee" value="1"></asp:listitem>
-                        <asp:listitem text="(b)CSIR Pensioner" value="2"></asp:listitem>
-                        <asp:listitem text="(c)CSIR Student(PF/JRF/SRF/RA/Scholars)" value="3"></asp:listitem>
-                        <asp:listitem text="Dependant spouse/child/parent/sibling of (a)/(b)" value="4"></asp:listitem>
-                        <asp:listitem text="Non-Dependant spouse/child/parent/sibling of (a)/(b)" value="5"></asp:listitem>
-                        <asp:listitem text="Other Friend/Relative/Personal Guest of (a)/(b)" value="6"></asp:listitem>
-                        <asp:listitem text="Students Family/Relative/Personal guest of (c)" value="7"></asp:listitem>
-                        <asp:listitem text="[Official] Expert/Invitee/Reviewer/Consultant/Non-CSIR Official for CSIR/IMMT work" value="8"></asp:listitem>
-                        <asp:listitem text="NRI/Foreign Guest" value="9"></asp:listitem>
                     </asp:DropDownList></td>
                 <td>
                     <asp:TextBox ID="TextBox32" CssClass="TextBoxc8" runat="server" placeholder="Voter-ID/Adhaar/PAN/DL/etc"></asp:TextBox></td>
@@ -443,3 +385,4 @@ h3 {color:#3a54f2;
     </form>
 </body>
 </html>
+
