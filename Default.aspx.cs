@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -31,7 +31,6 @@ public partial class _Default : System.Web.UI.Page
         cmd.CommandText = sql;
         cmd.Connection = con;
         SqlDataAdapter sda = new SqlDataAdapter(cmd);
-
         DataTable dt = new DataTable();
         sda.Fill(dt);
         gvCustomers.DataSource = dt;
@@ -48,7 +47,7 @@ public partial class _Default : System.Web.UI.Page
         {
             int index = Convert.ToInt32(e.CommandArgument);
             GridViewRow row = gvCustomers.Rows[index];
-            Response.Redirect("~/Default3.aspx?Empno=" + row.Cells[0].Text);
+            Response.Redirect("~/Default3.aspx?Empno=" +row.Cells[0].Text);
         }
     }
     protected void txtSearch_TextChanged(object sender, EventArgs e)
