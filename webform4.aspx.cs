@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -6,11 +6,51 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
+using System.Data;
 
 public partial class webform4 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (!this.IsPostBack)
+        {
+            string Q = "Select * from mstrCategory";
+            SqlCommand com = new SqlCommand(Q,dbcls.CONN());
+            SqlDataAdapter adpt = new SqlDataAdapter(com);
+            DataTable dt = new DataTable();
+            adpt.Fill(dt);
+            TextBox38.DataSource = dt;
+            TextBox38.DataBind();
+            TextBox38.DataTextField = "category";
+            TextBox38.DataValueField = "cid";
+            TextBox38.DataBind();
+            DropDownList7.DataSource = dt;
+            DropDownList7.DataBind();
+            DropDownList7.DataTextField = "category";
+            DropDownList7.DataValueField = "cid";
+            DropDownList7.DataBind();
+            DropDownList9.DataSource = dt;
+            DropDownList9.DataBind();
+            DropDownList9.DataTextField = "category";
+            DropDownList9.DataValueField = "cid";
+            DropDownList9.DataBind();
+            DropDownList11.DataSource = dt;
+            DropDownList11.DataBind();
+            DropDownList11.DataTextField = "category";
+            DropDownList11.DataValueField = "cid";
+            DropDownList11.DataBind();
+            DropDownList13.DataSource = dt;
+            DropDownList13.DataBind();
+            DropDownList13.DataTextField = "category";
+            DropDownList13.DataValueField = "cid";
+            DropDownList13.DataBind();
+            DropDownList15.DataSource = dt;
+            DropDownList15.DataBind();
+            DropDownList15.DataTextField = "category";
+            DropDownList15.DataValueField = "cid";
+            DropDownList15.DataBind(); 
+
+        }
 
     }
     protected void btn_addnew_Click(object sender, EventArgs e)
