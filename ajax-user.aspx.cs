@@ -35,13 +35,7 @@ public partial class ajax_user : System.Web.UI.Page
                     Q = "SELECT TOP 10 appName FROM applicant WHERE appName like '%" + Request.Form["keyword"].ToString() + "%'";
                if (id == "2")
                {
-                  string Q1 = "SELECT appId FROM guest WHERE guestName like '%" + Request.Form["keyword"].ToString() + "%'";
-                   SqlCommand comx = new SqlCommand(Q1, dbcls.CONN());
-                   SqlDataAdapter reader = new SqlDataAdapter(comx);
-                   DataTable dt = new DataTable();
-                   //temp=reader.Fill(dt);
-                   Q = "SELECT TOP 10 appName FROM applicant WHERE appId like '%" + Request.Form["temp"].ToString() + "%'";
-
+                    Q = "SELECT TOP 10 appName from applicant where appId IN(SELECT appId FROM guest WHERE guestName like '%" + Request.Form["keyword"].ToString() + "%')";
                }
                if(id=="3")
                     Q = "SELECT TOP 10 org FROM applicant WHERE org like '%" + Request.Form["keyword"].ToString() + "%'";
