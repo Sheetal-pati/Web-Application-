@@ -27,9 +27,9 @@ public partial class Default3 : System.Web.UI.Page
             + dt.Rows[0][4].ToString();
         Label17.Text = dt.Rows[0][5].ToString() + ", Email:" + dt.Rows[0][6].ToString();
         Label18.Text = dt.Rows[0][8].ToString();
-        Label20.Text = dt.Rows[0][9].ToString();
-        Label21.Text = dt.Rows[0][10].ToString();
-        Label22.Text = dt.Rows[0][13].ToString();
+        Label20.Text = Class1.changedate(dt.Rows[0][9].ToString());
+        Label21.Text = Class1.changedate(dt.Rows[0][10].ToString());
+        Label22.Text = Class1.changedate(dt.Rows[0][13].ToString());
         Label23.Text = dt.Rows[0][11].ToString();
         Label24.Text = dt.Rows[0][15].ToString();
         Label25.Text = dt.Rows[0][16].ToString();
